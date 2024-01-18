@@ -57,12 +57,42 @@
         <div class="row">
           <div class="col-lg-10 offset-lg-1">
             <div class="shop__wrapper">
-              <product-card />
-              <product-card />
-              <product-card />
-              <product-card />
-              <product-card />
-              <product-card />
+              <product-card
+                classItem="shop__item"
+                :name="coffee[0].name"
+                :price="coffee[0].price"
+                :image="coffee[0].image"
+              />
+              <product-card
+                classItem="shop__item"
+                :name="coffee[1].name"
+                :price="coffee[1].price"
+                :image="coffee[1].image"
+              />
+              <product-card
+                classItem="shop__item"
+                :name="coffee[2].name"
+                :price="coffee[2].price"
+                :image="coffee[2].image"
+              />
+              <product-card
+                classItem="shop__item"
+                :name="coffee[3].name"
+                :price="coffee[3].price"
+                :image="coffee[3].image"
+              />
+              <product-card
+                classItem="shop__item"
+                :name="coffee[4].name"
+                :price="coffee[4].price"
+                :image="coffee[4].image"
+              />
+              <product-card
+                classItem="shop__item"
+                :name="coffee[5].name"
+                :price="coffee[5].price"
+                :image="coffee[5].image"
+              />
             </div>
           </div>
         </div>
@@ -77,5 +107,47 @@ import ProductCard from "@/components/ProductCard.vue";
 
 export default {
   components: { NavBarComponent, ProductCard },
+  data() {
+    return {
+      coffee: [
+        {
+          id: 0,
+          name: "Death Wish Bean",
+          price: 12.99,
+          image: "coffee-1.jpg",
+        },
+        {
+          id: 1,
+          name: "AROMISTICO Coffee 1 kg",
+          price: 6.99,
+          image: "coffee-2.jpg",
+        },
+        {
+          id: 2,
+          name: "Solimo Coffee Beans 2 kg",
+          price: 10.73,
+          image: "coffee-3.jpg",
+        },
+        {
+          id: 3,
+          name: "Black Rifle Coffee",
+          price: 19.75,
+          image: "coffee-1.jpg",
+        },
+        {
+          id: 4,
+          name: "Presto Coffee Beans 1 kg",
+          price: 15.99,
+          image: "coffee-2.jpg",
+        },
+        {
+          id: 5,
+          name: "Organic Coffee One Cup",
+          price: 24.99,
+          image: "coffee-3.jpg",
+        },
+      ],
+    };
+  },
 };
 </script>
