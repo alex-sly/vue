@@ -26,7 +26,7 @@
                   </label>
                 </div>
                 <div class="col col-12 col-sm-9">
-                  <input v-model="form.name" type="text" class="form-control" id="name-input" />
+                  <input v-model="name" type="text" class="form-control" id="name-input" />
                 </div>
               </div>
 
@@ -38,7 +38,7 @@
                   </label>
                 </div>
                 <div class="col col-12 col-sm-9">
-                  <input v-model="form.email" type="email" class="form-control" id="email-input" />
+                  <input v-model="email" type="email" class="form-control" id="email-input" />
                 </div>
               </div>
 
@@ -47,7 +47,7 @@
                   <label for="phone-input" class="mb-0"> Phone </label>
                 </div>
                 <div class="col col-12 col-sm-9">
-                  <input v-model="form.phone" type="tel" class="form-control" id="phone-input" />
+                  <input v-model="phone" type="tel" class="form-control" id="phone-input" />
                 </div>
               </div>
 
@@ -60,7 +60,7 @@
                 </div>
                 <div class="col col-12">
                   <textarea
-                    v-model="form.message"
+                    v-model="message"
                     class="form-control"
                     name="message"
                     id="message"
@@ -89,18 +89,16 @@ import NavBarComponent from "@/components/NavBarComponent.vue";
 export default {
   data() {
     return {
-      form: {
-        name: "",
-        email: "",
-        phone: "",
-        message: "",
-      },
+      name: "",
+      email: "",
+      phone: "",
+      message: "",
     };
   },
   components: { NavBarComponent },
   methods: {
     submit() {
-      console.log(this.form);
+      // console.log(this.form);
     },
   },
 };
