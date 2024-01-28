@@ -98,7 +98,20 @@ export default {
   components: { NavBarComponent },
   methods: {
     submit() {
-      // console.log(this.form);
+      const message = {
+        name: this.name,
+        email: this.email,
+        phone: this.phone,
+        message: this.message,
+      };
+
+      fetch("http://localhost:3000/contacts", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(message),
+      });
     },
   },
 };

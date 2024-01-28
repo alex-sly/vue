@@ -92,5 +92,17 @@ export default {
       this.$router.push({ name: "coffee", params: { id: id } });
     },
   },
+  data() {
+    return {
+      name: "coffee",
+    };
+  },
+  mounted() {
+    fetch("http://localhost:3000/coffee")
+      .then((res) => res.json())
+      .then((data) => {
+        this.$store.dispatch("setCoffeeData", data);
+      });
+  },
 };
 </script>
