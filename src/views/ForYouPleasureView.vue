@@ -106,5 +106,17 @@ export default {
       this.$router.push({ name: "goods", params: { id: id } });
     },
   },
+  data() {
+    return {
+      name: "goods",
+    };
+  },
+  mounted() {
+    fetch("http://localhost:3000/goods")
+      .then((res) => res.json())
+      .then((data) => {
+        this.$store.dispatch("setGoodsData", data);
+      });
+  },
 };
 </script>

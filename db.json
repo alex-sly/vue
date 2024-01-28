@@ -4,19 +4,19 @@
       "id": 0,
       "name": "Solimo Coffee Beans 2 kg",
       "image": "https://images-na.ssl-images-amazon.com/images/I/815O9ktyfUL._SL1500_.jpg",
-      "price": "10.73$"
+      "price": 10.73
     },
     {
       "id": 1,
       "name": "Presto Coffee Beans 1 kg",
       "image": "https://images-na.ssl-images-amazon.com/images/I/91Ryk2gKejL._SL1500_.jpg",
-      "price": "15.99$"
+      "price": 15.99
     },
     {
       "id": 2,
       "name": "AROMISTICO Coffee 1 kg",
       "image": "https://images-na.ssl-images-amazon.com/images/I/71qBQnpQFYL._SL1500_.jpg",
-      "price": "6.99$"
+      "price": 6.99
     }
   ],
   "coffee": [
@@ -74,25 +74,25 @@
       "id": 0,
       "name": "Electric Spice and Coffee Grinder",
       "image": "https://images-na.ssl-images-amazon.com/images/I/41qvqWRCm3L.jpg",
-      "price": "36.99$"
+      "price": 36.99
     },
     {
       "id": 1,
       "name": "Manual Coffee Grinder",
       "image": "https://images-na.ssl-images-amazon.com/images/I/91gR5HFtmaL._SL1500_.jpg",
-      "price": "25.99$"
+      "price": 25.99
     },
     {
       "id": 2,
       "name": "Coffee Cup with Lid",
       "image": "https://images-na.ssl-images-amazon.com/images/I/71L5Ut1HHSL._SL1500_.jpg",
-      "price": "15.99$"
+      "price": 15.99
     },
     {
       "id": 3,
       "name": "Pour Over Coffee Maker",
       "image": "https://images-na.ssl-images-amazon.com/images/I/916TPwGqfML._SL1500_.jpg",
-      "price": "45.99$"
+      "price": 45.99
     }
   ],
   "contacts": [
