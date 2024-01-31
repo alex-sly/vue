@@ -82,7 +82,7 @@
 import NavBarComponent from "@/components/NavBarComponent.vue";
 import ProductCard from "@/components/ProductCard.vue";
 
-import { debounce } from "debounce";
+import debounce from "debounce";
 
 export default {
   components: { NavBarComponent, ProductCard },
@@ -100,15 +100,12 @@ export default {
     },
   },
   methods: {
-    navigate(id) {
-      this.$router.push({ name: "coffee", params: { id: id } });
-    },
-    onSearch(event) {
+    onSearch: debounce(function (event) {
       this.onSort(event.target.value);
-    },
-    // onSearch: debounce(function (event) {
+    }, 300),
+    // onSearch(event) {
     //   this.onSort(event.target.value);
-    // }, 300),
+    // },
     onSort(value) {
       fetch(`http://localhost:3000/coffee?q=${value}`)
         .then((res) => res.json())
@@ -116,6 +113,9 @@ export default {
           this.$store.dispatch("setCoffeeData", data);
         });
       // this.$store.dispatch("setSortValue", value);
+    },
+    navigate(id) {
+      this.$router.push({ name: "coffee", params: { id: id } });
     },
   },
   data() {
