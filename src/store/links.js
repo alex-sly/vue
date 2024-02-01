@@ -2,29 +2,29 @@ const links = {
   state: {
     header: {
       id: 0,
-      link: "/",
+      link: "/vue/",
       icon: "Logo.svg",
     },
     footer: {
       id: 0,
-      link: "/",
+      link: "/vue/",
       icon: "Logo_black.svg",
     },
     other: [
       {
         id: 1,
         text: "Our coffee",
-        link: "/our-coffee",
+        link: "/vue/our-coffee",
       },
       {
         id: 2,
         text: "For your pleasure",
-        link: "/for-you-pleasure",
+        link: "/vue/for-you-pleasure",
       },
       {
         id: 3,
         text: "Contact us",
-        link: "/contact-us",
+        link: "/vue/contact-us",
       },
     ],
   },

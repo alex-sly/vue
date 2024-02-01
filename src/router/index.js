@@ -11,13 +11,13 @@ import GoodsItemView from "../views/GoodsItemView";
 Vue.use(VueRouter);
 
 const routes = [
-  { path: "/", component: HeroView },
-  { path: "/our-coffee", component: OurCoffeeView },
-  { path: "/for-you-pleasure", component: ForYouPleasureView },
-  { path: "/contact-us", component: ContactUsView },
-  { path: "/thank-you", component: ThankYouView },
-  { name: "coffee", path: "/our-coffee/:id", component: GoodsItemView },
-  { name: "goods", path: "/for-you-pleasure/:id", component: GoodsItemView },
+  { path: "/vue/", component: HeroView },
+  { path: "/vue/our-coffee", component: OurCoffeeView },
+  { path: "/vue/for-you-pleasure", component: ForYouPleasureView },
+  { path: "/vue/contact-us", component: ContactUsView },
+  { path: "/vue/thank-you", component: ThankYouView },
+  { name: "coffee", path: "/vue/our-coffee/:id", component: GoodsItemView },
+  { name: "goods", path: "/vue/for-you-pleasure/:id", component: GoodsItemView },
 ];
 
 const router = new VueRouter({

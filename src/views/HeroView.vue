@@ -88,11 +88,12 @@ export default {
     },
   },
   mounted() {
-    fetch("http://localhost:3000/bestsellers")
+    fetch("db.json")
       .then((res) => res.json())
       .then((data) => {
-        this.$store.dispatch("setBestsellersData", data);
+        this.$store.dispatch("setBestsellersData", data["bestsellers"]);
       });
+    // "http://localhost:3000/bestsellers"
   },
 };
 </script>

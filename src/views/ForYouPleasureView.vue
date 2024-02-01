@@ -112,11 +112,12 @@ export default {
     };
   },
   mounted() {
-    fetch("http://localhost:3000/goods")
+    fetch("db.json")
       .then((res) => res.json())
       .then((data) => {
-        this.$store.dispatch("setGoodsData", data);
+        this.$store.dispatch("setGoodsData", data["goods"]);
       });
+    // "http://localhost:3000/goods"
   },
 };
 </script>

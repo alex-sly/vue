@@ -10,7 +10,6 @@
         <h1 class="title-big" v-if="product">{{ product.name }}</h1>
       </div>
     </div>
-
     <section class="shop" v-if="product">
       <div class="container">
         <div class="row">
@@ -57,11 +56,12 @@ export default {
     };
   },
   mounted() {
-    fetch(`http://localhost:3000/${this.pageName}/${this.$route.params.id}`)
+    fetch("../db.json")
       .then((res) => res.json())
       .then((data) => {
-        this.product = data;
+        this.product = data[this.pageName][this.$route.params.id];
       });
+    // `http://localhost:3000/${this.pageName}/${this.$route.params.id}`
   },
   destroyed() {
     this.product = null;

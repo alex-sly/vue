@@ -105,13 +105,14 @@ export default {
         message: this.message,
       };
 
-      fetch("http://localhost:3000/contacts", {
+      fetch("https://jsonplaceholder.typicode.com/posts", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(message),
       });
+      // "http://localhost:3000/contacts"
     },
   },
 };

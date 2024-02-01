@@ -107,12 +107,12 @@ export default {
     //   this.onSort(event.target.value);
     // },
     onSort(value) {
-      fetch(`http://localhost:3000/coffee?q=${value}`)
-        .then((res) => res.json())
-        .then((data) => {
-          this.$store.dispatch("setCoffeeData", data);
-        });
-      // this.$store.dispatch("setSortValue", value);
+      // fetch(`http://localhost:3000/coffee?q=${value}`)
+      //   .then((res) => res.json())
+      //   .then((data) => {
+      //     this.$store.dispatch("setCoffeeData", data);
+      //   });
+      this.$store.dispatch("setSortValue", value);
     },
     navigate(id) {
       this.$router.push({ name: "coffee", params: { id: id } });
@@ -124,11 +124,12 @@ export default {
     };
   },
   mounted() {
-    fetch("http://localhost:3000/coffee")
+    fetch("db.json")
       .then((res) => res.json())
       .then((data) => {
-        this.$store.dispatch("setCoffeeData", data);
+        this.$store.dispatch("setCoffeeData", data["coffee"]);
       });
+    // "http://localhost:3000/coffee"
   },
 };
 </script>

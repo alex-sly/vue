@@ -18,7 +18,6 @@
             <img class="beanslogo mt-5" src="@/assets/logo/Beans_logo_dark.svg" alt="Beans logo" />
           </div>
         </div>
-
         <div class="row">
           <div class="col">
             <div class="title big__text mt-5">
